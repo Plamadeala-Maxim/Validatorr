@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multi-Step Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div id="upBar"></div>
+    <div class="validator">
+        <!-- <div class="progress-bar">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+        </div> -->
+        <div class="container">
 
-<div id="allContainers">
 
-    <div id="firstContainer">
-        <div class="containerText">
-            <h2>CREATE YOUR ACCOUNT</h2>
-            <p>This is step 1</p>
-        </div>
-        <div class="containerInputs">
-            <input placeholder="Email" id="emailInput" type="email">
-            <input placeholder="Pasword" id="paswordInput" type="password">
-            <input placeholder="Confirm Pasword" id="vPaswordInput" type="password">
-        </div>
-        <div class="containerBtns">
-            <button>Next</button>
+            <form id="multiStepForm">
+                <div class="form-step active">
+                    <h2>CREATE YOUR ACCOUNT</h2>
+                    <p>This is step 1</p>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="button" id="next1">Next</button>
+                </div>
+                <div class="form-step">
+                    <h2>SOCIAL PROFILES</h2>
+                    <p>Your presence on the social network</p>
+                    <input type="text" placeholder="Twitter">
+                    <input type="text" placeholder="Facebook">
+                    <input type="text" placeholder="Google Plus">
+                    <div class="btn-group">
+                        <button type="button" id="prev2">Previous</button>
+                        <button type="button" id="next2">Next</button>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <h2>PERSONAL DETAILS</h2>
+                    <p>We will never sell it</p>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="text" placeholder="Phone">
+                    <input type="text" placeholder="Address">
+                    <div class="btn-group">
+                        <button type="button" id="prev3">Previous</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    <div id="secondContainer">
-        <div class="containerText">
-            <h2>SOCIAL PROFILES</h2>
-            <p>Your presence on the social network</p>
-        </div>
-        <div class="containerInputs">
-            <input placeholder="Twitter" type="text">
-            <input placeholder="Facebook" type="text">
-            <input placeholder="Google Plus" type="text">
-        </div>
-        <div class="containerBtns">
-            <button>Previous</button>
-            <button>Next</button>
-        </div>
-    </div>
-    <div id="thirdContainer">
-        <div class="containerText">
-            <h2>PERSONAL DETAILS</h2>
-            <p>We will never sell it</p>
-        </div>
-        <div class="containerInputs">
-            <input placeholder="First Name" type="text">
-            <input placeholder="Second Name" type="text">
-            <input placeholder="Phone" type="number">
-            <input placeholder="Addres" type="text">
-        </div>
-        <div class="containerBtns">
-            <button>Previous</button>
-            <button>Submit</button>
-        </div>
-    </div>
-
-</div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
