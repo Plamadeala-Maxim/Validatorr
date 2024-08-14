@@ -10,6 +10,9 @@ const google_plus = document.querySelector('.google-plus')
 const email = document.querySelector('.email')
 const password = document.querySelector('.password')
 const confirm_pass = document.querySelector('.confirm-password')
+const submit = document.querySelector('.submit')
+const phone = document.querySelector('.phone')
+
 
 
 next1.addEventListener('click', () => {
@@ -29,6 +32,11 @@ next2.addEventListener('click', () => {
         progressBarSteps[2].classList.add('active');
 }
 });
+
+
+submit.addEventListener('click', ()=>{
+    alert('Account Created')
+})
 
 
 prev2.addEventListener('click', () => {
