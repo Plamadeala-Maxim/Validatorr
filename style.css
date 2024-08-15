@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #f6d365, #fda085);
-    height: 100vh;
+    height: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin: 0;
 }
 
@@ -15,6 +15,7 @@ body {
     justify-content: center;
     text-align: center;
     width: 500px;
+    height: 790px;
 }
 
 .container {
@@ -23,31 +24,66 @@ display: flex;
 
 .progress-bar {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-bottom: 2rem;
     max-width: 400px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px;
 }
 
 .multiStepForm {
     align-items: center;
 }
+#steps{
+display: flex;
+justify-content: space-between;
+}
 
+#stepNames{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 8px;
+    width: 484px;
+    margin-left: -36px;
+    margin-top: 40px;
+}
 .step {
     width: 30px;
     height: 30px;
-    background: lightgray;
+    background: rgb(255, 252, 252);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
 }
 
-.step.active {
+.step.active , #firstLine.active ,#secondLine.active{
     background: #4CAF50;
+    color: white;
+
 }
 
+#firstLine{
+    position: absolute;
+    width: 155px;
+    height: 3px;
+    background-color: white;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+#secondLine{
+    position: absolute;
+    width: 155px;
+    height: 3px;
+    background-color: white;
+    margin-left: 215px;
+    margin-top: 15px;
+}
 .form-step {
     background: white;
     padding: 2rem;
