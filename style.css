@@ -9,17 +9,16 @@ body {
 }
 
 .validator {
-    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 500px;
 }
 
 .container {
-    background: white;
-    padding: 2rem;
-    border-radius: 4px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+display: flex;
 }
 
 .progress-bar {
@@ -50,15 +49,16 @@ body {
 }
 
 .form-step {
-    display: none;
-}
-
-.form-step.active {
-    display: block;
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 470px;
 }
 
 input {
-    width: 350px;
+    width: 80%;
     padding: 25px;
     margin: 15px 0;
     border-radius: 2px;
@@ -85,4 +85,41 @@ button:disabled {
 .btn-group {
     display: flex;
     justify-content: space-evenly;
+}
+.nice{
+    width: 470px !important;
+    z-index :2 !important;
+    opacity: 1 !important;
+}
+.notNice{
+    opacity: 0 !important;
+    width: 320px;
+    transform: scaleY(0) scaleX(0);
+}
+.staticContainer{
+    z-index: 1;
+    opacity: 1;
+transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+width: 470px;
+}
+
+#first-rails{
+position: absolute;
+width: 1000px;
+opacity: 0;
+display: flex;
+justify-content: end;
+z-index: 0;
+
+transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#second-rails{
+    position: absolute;
+width: 1000px;
+    opacity: 0;
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

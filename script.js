@@ -12,24 +12,26 @@ const password = document.querySelector('.password')
 const confirm_pass = document.querySelector('.confirm-password')
 const submit = document.querySelector('.submit')
 const phone = document.querySelector('.phone')
+const first = document.querySelector('.staticContainer')
+const first_rails = document.querySelector('#first-rails')
+const second_rails = document.querySelector('#second-rails')
+
 
 
 
 next1.addEventListener('click', () => {
-    if(email.value.endsWith('@gmail.com') && password.value === confirm_pass.value || email.value.endsWith('@mail.ru') ){  
-        steps[0].classList.remove('active');
-        steps[1].classList.add('active');
-        progressBarSteps[0].classList.remove('active');
-        progressBarSteps[1].classList.add('active');
+    if(email.value.endsWith('@gmail.com') && password.value === confirm_pass.value || email.value.endsWith('@mail.ru') ){ 
+        first.classList.add('notNice')
+        first_rails.classList.add('nice')
+
     }
 });
 
 next2.addEventListener('click', () => {
     if(twitter.value.startsWith('https://x.com/') && facebook.value.startsWith('https://www.facebook.com/')){
-        steps[1].classList.remove('active');
-        steps[2].classList.add('active');
-        progressBarSteps[1].classList.remove('active');
-        progressBarSteps[2].classList.add('active');
+        first_rails.classList.add('notNice')
+        second_rails.classList.add('nice')
+
 }
 });
 
@@ -40,15 +42,12 @@ submit.addEventListener('click', ()=>{
 
 
 prev2.addEventListener('click', () => {
-    steps[1].classList.remove('active');
-    steps[0].classList.add('active');
-    progressBarSteps[1].classList.remove('active');
-    progressBarSteps[0].classList.add('active');
+    first_rails.classList.remove('nice')
+    first.classList.remove('notNice')
+
 });
 
 prev3.addEventListener('click', () => {
-    steps[2].classList.remove('active');
-    steps[1].classList.add('active');
-    progressBarSteps[2].classList.remove('active');
-    progressBarSteps[1].classList.add('active');
+    first_rails.classList.remove('notNice')
+    second_rails.classList.remove('nice')
 });
