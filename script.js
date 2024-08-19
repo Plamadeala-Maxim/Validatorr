@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const passwordValue = password.value.trim();
         const confirmPassValue = confirm_pass.value.trim();
 
-        if (emailValue === '' || (!emailValue.endsWith('@gmail.com') && !emailValue.endsWith('@mail.ru'))) {
+        if (emailValue === '' || !emailValue.includes('@')) {
             email.classList.add('shake');
             email.style.border = '1px solid red';
             errorMessage.style.visibility = 'visible';
